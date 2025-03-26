@@ -8,17 +8,15 @@ from carica_query_delivered import carica_query_delivered
 import mysql.connector as msc   
 import pandas as pd
 from connessione_alchemy import connessionealchemy
+from transform_pandas import transform
 
 lista_query = carica_query_delivered()
 db_alchemy = connessionealchemy()
 
 
-
-
-for i in range(len(lista_query)):
-    df = pd.read_sql(lista_query[i],db_alchemy) 
-    print(df)
+for i in range(len(lista_query)): 
+    df = transform(lista_query[i],db_alchemy) 
     ind = str(i)
-    tab = "ecommerce.userid" + ind      
+    tab = "userid" + ind      
     df.to_sql(f"{tab}",db_alchemy,if_exists='replace',index=False) #FUNZIONA SOLO CON SQLaLCHEMY ,if_exists='replace'
     
