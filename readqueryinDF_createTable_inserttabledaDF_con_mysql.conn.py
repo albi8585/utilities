@@ -1,6 +1,6 @@
-#questo modulo tramite mysql connector e pandas legge una query da database e la converte in dataframe. 
-# Dopo eventuali modifiche in pandas crea una tabella e crea una lista di tuple da dataframe
-# tramite la funzione pandas "itertuples" e le inserisce a ogni ciclo nei valori della tabella tramite insert into 
+#questo modulo tramite  pandas legge una query da database (con connessione sqlAlchemy) e la converte in dataframe con modifiche varie. 
+# crea una tabella (con libreria mysql.connector) e crea una lista di tuple da dataframe
+# tramite la funzione pandas "itertuples"  inserendole a ogni ciclo nei valori della tabella tramite insert into (con libreria mysql.connector) 
 
 from transform_pandas import transform
 from carica_query_delivered import carica_query_delivered
