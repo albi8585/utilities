@@ -12,7 +12,7 @@ def connessionealchemy ():
     if database == "mysql":
         try:
             username = "root" 
-            password = 'dandito85'
+            password = 'xxxxxxx'
             host = 'localhost'
             database = 'ecommerce'
             port = "3306"
