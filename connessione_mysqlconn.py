@@ -9,7 +9,7 @@ def conn_mysqlconn():
             mydb = mysql.connector.connect(
                 host = 'localhost',  # Replace with your MySQL host
                 user="root",  # Replace with your MySQL username
-                password = 'dandito85',  # Replace with your MySQL password
+                password = 'xxxxxxx',  # Replace with your MySQL password
                 database = 'ecommerce' # Replace with your database name (optional)
             )
 
